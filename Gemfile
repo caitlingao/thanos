@@ -4,6 +4,8 @@ source "https://rubygems.org"
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
+ruby '2.6.3'
+
 gem "coffee-rails"
 gem "jbuilder"
 gem "jquery-rails"
