@@ -31,6 +31,10 @@ gem 'rails-i18n', '~> 5.1', '>= 5.1.3'
 gem "dropzonejs-rails"
 gem "twemoji"
 
+# OAuth Provider
+gem "doorkeeper"
+gem "doorkeeper-i18n"
+
 # Faster inserts! Insert N records in a single statement.
 gem "bulk_insert"
 
@@ -68,6 +72,10 @@ gem "kaminari"
 
 # Form select 选项
 gem "form-select"
+
+# 三方平台 OAuth 验证登陆
+gem 'omniauth', '~> 1.9'
+gem 'omniauth-github', '~> 1.3'
 
 # 搜索
 gem "elasticsearch-model", "~> 5.0.2"
