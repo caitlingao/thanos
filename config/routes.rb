@@ -118,7 +118,7 @@ Rails.application.routes.draw do
       member do
         # post :suggest
         # post :unsuggest
-        # post :undestroy
+        post :undestroy
         post :action
       end
       post :preview, on: :collection

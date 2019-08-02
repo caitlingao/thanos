@@ -120,13 +120,13 @@ gem "rack-utf8_sanitizer"
 
 gem "exception-track"
 gem "status-page"
-
-# Homeland Plugins
-gem "homeland-jobs"
-gem "homeland-note"
-gem "homeland-press"
-gem "homeland-site"
-gem "homeland-wiki"
+#
+# # Homeland Plugins
+# gem "homeland-jobs"
+# gem "homeland-note"
+# gem "homeland-press"
+# gem "homeland-site"
+# gem "homeland-wiki"
 
 gem "bootsnap"
 
