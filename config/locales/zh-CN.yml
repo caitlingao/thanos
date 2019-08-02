@@ -1,8 +1,5 @@
 "zh-CN":
   contents: 目录
-  omniauth:
-    github: GitHub
-    twitter: Twitter
   device_platform:
     ios: iOS
     android: Android

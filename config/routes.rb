@@ -4,11 +4,6 @@ require "sidekiq/web"
 require "sidekiq-scheduler/web"
 
 Rails.application.routes.draw do
-  use_doorkeeper do
-    controllers applications: "oauth/applications",
-                authorized_applications: "oauth/authorized_applications"
-  end
-
   # resources :comments
   resources :devices
   # resources :teams
@@ -26,7 +21,6 @@ Rails.application.routes.draw do
     registrations: :account,
     sessions: :sessions,
     passwords: :passwords,
-    omniauth_callbacks: "auth/omniauth_callbacks"
   }
 
   resource :setting do
@@ -132,7 +126,7 @@ Rails.application.routes.draw do
     end
     resources :photos
     resources :comments
-    resources :applications
+    # resources :applications
     resources :stats
   end
 

@@ -41,13 +41,6 @@ module Homeland
 
     config.to_prepare do
       Devise::Mailer.layout "mailer"
-      Doorkeeper::ApplicationController.include Homeland::UserNotificationHelper
-      # Only Applications list
-      Doorkeeper::ApplicationsController.layout "simple"
-      # Only Authorization endpoint
-      Doorkeeper::AuthorizationsController.layout "simple"
-      # Only Authorized Applications
-      Doorkeeper::AuthorizedApplicationsController.layout "simple"
     end
 
     config.action_cable.log_tags = [

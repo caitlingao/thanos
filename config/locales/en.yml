@@ -1,8 +1,5 @@
 en:
   contents: Contents
-  omniauth:
-    github: GitHub
-    twitter: Twitter
   sso:
     timeout_expired: 'SSO Token was expired.'
     unknown_error: 'Sorry, this have an unknown error with SSO login.'
