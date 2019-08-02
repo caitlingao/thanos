@@ -1,0 +1,10 @@
+# ============ init Section, Node ================
+s1 = Section.create(name: '新闻')
+Node.create(name: '国际', summary: '...', section_id: s1.id)
+Node.create(name: '时政', summary: '...', section_id: s1.id)
+Node.create(name: '军事', summary: '...', section_id: s1.id)
+s2 = Section.create(name: '财经')
+Node.create(name: '金融理财', summary: '...', section_id: s2.id)
+Node.create(name: '股票', summary: '...', section_id: s2.id)
+Node.create(name: '房地产', summary: '...', section_id: s2.id)
+Node.create(name: '宏观', summary: '...', section_id: s2.id)

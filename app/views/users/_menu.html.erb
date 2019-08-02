@@ -1,0 +1,7 @@
+<%= render_list class: "users-menu nav nav-tabs" do |li|
+  li << link_to(t("users.menu.profile"), user_path(@user), class: "nav-link")
+  li << link_to(t("users.menu.favorites"), favorites_user_path(@user), class: "nav-link hide-ios hidden-mobile")
+  if owner?(@user) && current_user.block_users?
+    li << link_to(t("users.menu.blocked"), blocked_user_path(@user), class: "nav-link hide-ios hidden-mobile")
+  end
+end %>
