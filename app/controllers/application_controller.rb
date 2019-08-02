@@ -14,29 +14,29 @@ class ApplicationController < ActionController::Base
   etag { Setting.footer_html }
   etag { Rails.env.development? ? Time.now : Date.current }
 
-  # before_action do
-  #   resource = controller_name.singularize.to_sym
-  #   method = "#{resource}_params"
-  #   params[resource] &&= send(method) if respond_to?(method, true)
-  #
-  #   if devise_controller?
-  #     devise_parameter_sanitizer.permit(:sign_in) { |u| u.permit(*User::ACCESSABLE_ATTRS) }
-  #     devise_parameter_sanitizer.permit(:account_update) do |u|
-  #       if current_user.email_locked?
-  #         u.permit(*User::ACCESSABLE_ATTRS)
-  #       else
-  #         u.permit(:email, *User::ACCESSABLE_ATTRS)
-  #       end
-  #     end
-  #     devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(*User::ACCESSABLE_ATTRS) }
-  #   end
-  #
-  #   User.current = current_user
-  #   cookies.signed[:user_id] ||= current_user.try(:id)
-  #
-  #   # hit unread_notify_count
-  #   unread_notify_count
-  # end
+  before_action do
+    resource = controller_name.singularize.to_sym
+    method = "#{resource}_params"
+    params[resource] &&= send(method) if respond_to?(method, true)
+
+    if devise_controller?
+      devise_parameter_sanitizer.permit(:sign_in) { |u| u.permit(*User::ACCESSABLE_ATTRS) }
+      devise_parameter_sanitizer.permit(:account_update) do |u|
+        if current_user.email_locked?
+          u.permit(*User::ACCESSABLE_ATTRS)
+        else
+          u.permit(:email, *User::ACCESSABLE_ATTRS)
+        end
+      end
+      devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(*User::ACCESSABLE_ATTRS) }
+    end
+
+    User.current = current_user
+    cookies.signed[:user_id] ||= current_user.try(:id)
+
+    # hit unread_notify_count
+    unread_notify_count
+  end
 
   before_action :set_active_menu
   def set_active_menu
