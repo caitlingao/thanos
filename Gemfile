@@ -16,8 +16,8 @@ gem "uglifier"
 
 gem "sanitize"
 
-gem "pg"
-gem "pghero"
+gem 'pg', '~> 1.1', '>= 1.1.4'
+gem 'pghero', '~> 2.2', '>= 2.2.1'
 
 gem "dotenv-rails"
 
@@ -27,14 +27,11 @@ gem "bootstrap", "~> 4"
 gem "font-awesome-rails"
 gem "http_accept_language"
 gem "jquery-atwho-rails"
-gem "rails-i18n"
+gem 'rails-i18n', '~> 5.1', '>= 5.1.3'
 gem "dropzonejs-rails"
 gem "twemoji"
 
-# OAuth Provider
-gem "doorkeeper"
-gem "doorkeeper-i18n"
-
+# Faster inserts! Insert N records in a single statement.
 gem "bulk_insert"
 
 # 上传组件
@@ -75,10 +72,6 @@ gem "form-select"
 # 搜索
 gem "elasticsearch-model", "~> 5.0.2"
 gem "elasticsearch-rails", "~> 5.0.2"
-
-# 三方平台 OAuth 验证登陆
-gem "omniauth"
-gem "omniauth-github"
 
 # Permission
 gem "cancancan"
