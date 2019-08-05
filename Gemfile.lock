@@ -475,7 +475,7 @@ PLATFORMS
 DEPENDENCIES
   action-store
   auto-space
-  bootsnap
+  bootsnap (~> 1.4, >= 1.4.4)
   bootstrap (~> 4)
   bulk_insert
   byebug (~> 11.0, >= 11.0.1)
@@ -548,6 +548,9 @@ DEPENDENCIES
   turbolinks (~> 5.0.0)
   twemoji
   uglifier
+
+RUBY VERSION
+   ruby 2.6.3p62
 
 BUNDLED WITH
    1.17.2
