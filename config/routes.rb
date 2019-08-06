@@ -131,7 +131,7 @@ Rails.application.routes.draw do
   end
 
   # get "api", to: "home#api", as: "api"
-  # get "markdown", to: "home#markdown", as: "markdown"
+  get "markdown", to: "home#markdown", as: "markdown"
 
   # namespace :api do
   #   namespace :v3 do

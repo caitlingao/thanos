@@ -123,7 +123,7 @@ gem "status-page"
 # gem "homeland-site"
 # gem "homeland-wiki"
 
-gem 'bootsnap', '~> 1.4', '>= 1.4.4', require: false
+gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development do
   gem "derailed"

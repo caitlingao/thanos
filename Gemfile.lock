@@ -475,7 +475,7 @@ PLATFORMS
 DEPENDENCIES
   action-store
   auto-space
-  bootsnap (~> 1.4, >= 1.4.4)
+  bootsnap (>= 1.4.2)
   bootstrap (~> 4)
   bulk_insert
   byebug (~> 11.0, >= 11.0.1)
