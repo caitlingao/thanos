@@ -19,7 +19,7 @@ gem "uglifier"
 gem "sanitize"
 
 gem 'pg', '~> 1.1', '>= 1.1.4'
-gem 'pghero', '~> 2.2', '>= 2.2.1'
+gem 'pghero', '~> 2.7'
 
 gem "dotenv-rails"
 
